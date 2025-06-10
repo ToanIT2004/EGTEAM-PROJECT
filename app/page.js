@@ -305,35 +305,42 @@ export default function Home() {
                                                                                 className="rounded-full object-cover"
                                                                            />
                                                                       </div>
-                                                                      <div className="flex-1 pt-2">
-                                                                           <h1 className="text-2xl font-bold text-gray-900 mb-1">Lìu Hỉn Phát</h1>
-                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Blockchain Architect</p>
+                                                                      <div className="flex-1">
+                                                                           <h1 className="text-2xl font-bold text-gray-900">Lìu Hỉn Phát</h1>
+                                                                           <p className="text-cyan-500 font-semibold text-lg">Trưởng Nhóm EG Team – Dự án Blockchain</p>
+                                                                           <p className='text-base font-medium'>Sinh viên thực tập</p>
                                                                       </div>
                                                                  </div>
                                                             </div>
 
                                                             {/* Content Section */}
-                                                            <div className="p-6 space-y-6">
+                                                            <div className="p-6">
                                                                  {/* Introduction */}
                                                                  <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
+                                                                      <h2 className="text-lg font-semibold text-gray-900">Giới thiệu:</h2>
                                                                       <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Xin chào mọi người! Mình là Hỉn Phát, thủ lĩnh tinh thần (và cả deadline) của team Blockchain!
-                                                                           Mình có niềm đam mê mãnh liệt với những dòng code tạo nên thế giới phi tập trung.
-                                                                           Công việc chính của mình là định hướng kiến trúc chuỗi khối, tối ưu thuật toán đồng thuận và… hối team làm bài.
-                                                                           Ngoài giờ làm việc căng thẳng, mình thích đọc whitepaper, đọc thử testnet và thỉnh thoảng cuối tuần sẽ tổ chức offline cùng team.
-                                                                           Là người cầu toàn, mình luôn muốn mọi thứ thật chỉnh chu từ dòng code đến slide thuyết trình.
-                                                                           Đối với mình, làm việc nhóm không chỉ là hoàn thành task mà còn là phát triển cùng nhau.
-                                                                           Dự án lần này là bước đi táo bạo nhưng mình tin vào sức mạnh của team.
-                                                                           Rất vui được đồng hành cùng mọi người trên hành trình khám phá Blockchain!
-
+                                                                           Tôi là Lìu Hỉn Phát – trưởng nhóm EG Team của dự án Blockchain. Với nền tảng chuyên sâu về Công nghệ Thông tin và niềm đam mê với công nghệ phi tập trung, tôi và đội ngũ đã cùng nhau xây dựng và phát triển một hệ sinh thái blockchain minh bạch, bảo mật và hướng đến ứng dụng thực tế.
+                                                                           Tôi chịu trách nhiệm định hướng kỹ thuật, thiết kế kiến trúc hệ thống blockchain layer-1, phát triển các thuật toán đồng thuận (bao gồm cả thuật toán tùy chỉnh như Proof of Tracing), tối ưu hiệu suất và đảm bảo các yếu tố bảo mật cho mạng lưới.
                                                                       </p>
-                                                                 </div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900">Tầm nhìn:</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Dẫn dắt kiến trúc kỹ thuật và chiến lược phát triển hệ thống
+                                                                           Quản lý và phân công công việc kỹ thuật cho toàn đội
+                                                                           Kiểm duyệt mã nguồn và bảo mật cho toàn bộ hệ thống blockchain
+                                                                           Đại diện kỹ thuật cho các buổi pitching, thuyết trình và hội thảo công nghệ
+                                                                      </p>
 
-                                                                 {/* Education */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                      <h2 className="text-lg font-semibold text-gray-900">Vai trò trong Core Team:</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Dẫn dắt kiến trúc kỹ thuật và chiến lược phát triển hệ thống
+                                                                           Quản lý và phân công công việc kỹ thuật cho toàn đội
+                                                                           Kiểm duyệt mã nguồn và bảo mật cho toàn bộ hệ thống blockchain
+                                                                           Đại diện kỹ thuật cho các buổi pitching, thuyết trình và hội thảo công nghệ
+                                                                      </p>
+                                                                      <h2 className="text-lg font-semibold text-gray-900">Chuyên môn:</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Công nghệ Blockchain, Smart Contract, Bảo mật hệ thống phi tập trung
+                                                                      </p>
                                                                  </div>
                                                             </div>
                                                        </DialogPanel>
@@ -432,6 +439,13 @@ export default function Home() {
                                              <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                                                   <div className="flex min-h-full items-center justify-center p-4 text-center">
                                                        <DialogPanel transition className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in w-[700px] data-[closed]:scale-95">
+                                                            <button
+                                                                 onClick={() => setOpen5(false)}
+                                                                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
+                                                                 aria-label="Đóng"
+                                                            >
+                                                                 &times;
+                                                            </button>
                                                             {/* Header Section */}
                                                             <div className="bg-gradient-to-r from-cyan-100 to-cyan-50 p-6 relative">
                                                                  <div className="flex items-start gap-4">
