@@ -9,9 +9,15 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import IntroVideoSection from '@/components/Review/IntroVideoSection ';
 import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
-
+import { Send, Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from "lucide-react"
 
 export default function Home() {
+     const [formData, setFormData] = useState({
+          name: '',
+          email: '',
+          phone: '',
+          question: '',
+     });
      const [open1, setOpen1] = useState(false)
      const [open2, setOpen2] = useState(false)
      const [open3, setOpen3] = useState(false)
@@ -28,6 +34,25 @@ export default function Home() {
           });
      }, []);
 
+     const handleChange = (e) => {
+          const { name, value } = e.target;
+          setFormData((prev) => ({
+               ...prev,
+               [name]: value,
+          }));
+     };
+
+     const handleSubmit = () => {
+          alert("Bạn gửi thông tin thành công")
+          // Chỉ reset input, không làm gì thêm
+          setFormData({
+               name: '',
+               email: '',
+               phone: '',
+               question: '',
+          });
+     };
+
      return (
           <main>
                {/* Hero Section */}
@@ -40,7 +65,7 @@ export default function Home() {
 
                               {/* Hero Content */}
                               <div className='mt-[150px] sm:mt-0 container mx-auto px-4 h-[calc(100%-60px)] flex items-center'>
-                                   <div className='flex flex-col lg:flex-row items-center justify-between gap-8 w-full'>
+                                   <div className='flex flex-col lg:flex-row     items-center justify-between gap-8 w-full'>
                                         <div data-aos='fade-down' className='lg:ml-[100px] text-white w-full lg:max-w-[600px]'>
                                              <p className='text-[20px] font-light leading-[34px] w-full lg:w-[512px] text-center lg:text-left animate-fadeIn'>🔷 Giới thiệu về chúng tôi</p>
                                              <h1 className='text-[36px] lg:text-[48px] leading-[46px] lg:leading-[62.5px] bg-gradient-to-r from-[#00FF7B] to-[#00E0FF] text-transparent bg-clip-text font-bold w-full lg:w-[536px] text-center lg:text-left mt-2 '>Tạo ra các giải pháp thông minh và độc đáo</h1>
@@ -530,73 +555,137 @@ export default function Home() {
                     </div>
                </section>
 
-               {/* Featured Projects Section */}
-               {/* <section id='#projects' className='relative w-full py-20 overflow-hidden'>
-                    <div data-aos='zoom-in' className='container mx-auto px-4'>
-                         <div className='text-center mb-12'>
-                              <h2 className='text-[28px] md:text-[32px] lg:text-[36px] font-bold text-center text-[#00D768]'>DỰ ÁN TIÊU BIỂU</h2>
-                              <div className='h-[2px] w-full max-w-[800px] mx-auto bg-gradient-to-r from-transparent via-[#00E0FF] to-transparent mt-2'></div>
-                         </div>
-
-                         <div className='max-w-[1280px] mx-auto'>
-                              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-center'></div>
-                         </div>
-                    </div>
-               </section> */}
-
-               <footer id='contact' className='mt-10 bg-gradient-to-br from-[#004d4d] via-[#006666] to-[#00cccc] py-16 text-white'>
-                    <div data-aos='fade-up' data-aos-duration='1000' className='max-w-7xl mx-auto px-6'>
-                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+               <footer id="contact" className="mt-10 bg-gradient-to-br from-[#004d4d] via-[#006666] to-[#00cccc] py-16 text-white">
+                    <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto px-4">
+                         {/* Main Content */}
+                         <div className="flex flex-col gap-10 md:flex-row md:justify-between lg:justify-around">
+                              {/* Contact Form */}
                               <div>
-                                   <div className='relative w-[160px] h-[50px] mb-6'>
-                                        <Image src='/images/logo.svg' alt='Logo' fill className='object-contain' />
+                                   <h2 className="text-2xl font-bold mb-8 text-white">Liên hệ với chúng tôi</h2>
+                                   <div className="space-y-6">
+                                        <div>
+                                             <label className="block text-sm font-medium mb-2">
+                                                  Họ và tên <span className="text-red-400">*</span>
+                                             </label>
+                                             <input
+                                                  name="name"
+                                                  type="text"
+                                                  placeholder="Nhập họ và tên"
+                                                  value={formData.name}
+                                                  onChange={handleChange}
+                                                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+                                             />
+                                        </div>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                             <div>
+                                                  <label className="block text-sm font-medium mb-2">
+                                                       Email <span className="text-red-400">*</span>
+                                                  </label>
+                                                  <input
+                                                       name="email"
+                                                       type="email"
+                                                       placeholder="Nhập email"
+                                                       value={formData.email}
+                                                       onChange={handleChange}
+                                                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+                                                  />
+                                             </div>
+                                             <div>
+                                                  <label className="block text-sm font-medium mb-2">
+                                                       Số điện thoại <span className="text-red-400">*</span>
+                                                  </label>
+                                                  <input
+                                                       name="phone"
+                                                       type="tel"
+                                                       placeholder="Nhập số điện thoại"
+                                                       value={formData.phone}
+                                                       onChange={handleChange}
+                                                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+                                                  />
+                                             </div>
+                                        </div>
+
+                                        <div>
+                                             <label className="block text-sm font-medium mb-2">
+                                                  Câu hỏi <span className="text-red-400">*</span>
+                                             </label>
+                                             <textarea
+                                                  name="question"
+                                                  rows={4}
+                                                  placeholder="Nhập câu hỏi"
+                                                  value={formData.question}
+                                                  onChange={handleChange}
+                                                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent resize-none"
+                                             />
+                                        </div>
+
+                                        <button
+                                             onClick={handleSubmit}
+                                             className="inline-flex items-center gap-2 bg-[#00cccc] hover:bg-[#00b3b3] text-white font-medium px-8 py-3 rounded-lg transition-colors duration-200"
+                                        >
+                                             Gửi
+                                             <Send className="w-4 h-4" />
+                                        </button>
                                    </div>
-                                   <p className='text-sm text-justify leading-relaxed'>EG TEAM - Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.</p>
                               </div>
 
-                              {/* Liên hệ */}
+                              {/* Contact Information */}
                               <div>
-                                   <h3 className='text-lg font-bold mb-4 text-white relative inline-block'>
-                                        Liên hệ
-                                        <span className='absolute -bottom-2 left-0 w-12 h-0.5 bg-primary-light'></span>
-                                   </h3>
-                                   <ul className='space-y-4 text-sm'>
-                                        <li className='flex items-center gap-3'>
-                                             <span className='text-secondary-light'>📧</span>
-                                             contact@egteam.com
-                                        </li>
-                                        <li className='flex items-center gap-3'>
-                                             <span className='text-secondary-light'>📱</span>
-                                             +84 000 000 000
-                                        </li>
-                                        <li className='flex items-center gap-3'>
-                                             <span className='text-secondary-light'>📍</span>
-                                             TP. Hồ Chí Minh, Việt Nam
-                                        </li>
-                                   </ul>
-                              </div>
+                                   <h3 className="text-2xl font-bold mb-8 text-white">Thông tin liên hệ</h3>
 
-                              {/* Theo dõi */}
-                              <div>
-                                   <h3 className='text-lg font-bold mb-4 text-white relative inline-block'>
-                                        Theo dõi
-                                        <span className='absolute -bottom-2 left-0 w-12 h-0.5 bg-secondary-light'></span>
-                                   </h3>
-                                   <div className='flex gap-4 mb-6'>
-                                        <a href='https://www.youtube.com/@EG-TEAM' target="_blank" className='w-10 h-10 rounded-full bg-white/10 hover:bg-primary-light/20 transition flex items-center justify-center text-white'>
-                                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                   <div className="space-y-3 mb-5">
+                                        <div className="flex items-center gap-2">
+                                             <div className="flex items-center">
+                                                  <Phone className="w-4 h-4" />
+                                             </div>
+                                             <span className="text-sm">+84 000 000 000</span>
+                                        </div>
+
+                                        <div className="flex items-center gap-2">
+                                             <div className="flex items-center">
+                                                  <Mail className="w-4 h-4" />
+                                             </div>
+                                             <span className="text-sm">contact@egteam.com</span>
+                                        </div>
+
+                                        <div className="flex items-center gap-2">
+                                             <div className="flex items-center">
+                                                  <MapPin className="w-4 h-4" />
+                                             </div>
+                                             <span className="text-sm">TP.HCM</span>
+                                        </div>
+                                   </div>
+                                   <div className="pt-5 border-t border-white/20"></div>
+
+                                   {/* Social Media */}
+                                   <div className="flex gap-4">
+                                        <a
+                                             href="https://www.youtube.com/@EG-TEAM"
+                                             target="_blank"
+                                             className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00cccc]/20 transition flex items-center justify-center text-white group"
+                                             rel="noreferrer"
+                                        >
+                                             <svg
+                                                  className="w-4 h-4 group-hover:text-[#00cccc] transition-colors"
+                                                  fill="currentColor"
+                                                  viewBox="0 0 576 512"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                             >
                                                   <path d="M549.7 124.1c-6.3-23.7-24.9-42.4-48.6-48.6C456.5 64 288 64 288 64s-168.5 0-213.1 11.5c-23.7 6.3-42.4 24.9-48.6 48.6C16.8 168.5 16.8 256 16.8 256s0 87.5 9.5 131.9c6.3 23.7 24.9 42.4 48.6 48.6C119.5 448 288 448 288 448s168.5 0 213.1-11.5c23.7-6.3 42.4-24.9 48.6-48.6 9.5-44.4 9.5-131.9 9.5-131.9s0-87.5-9.5-131.9zM232 336V176l142 80-142 80z" />
                                              </svg>
                                         </a>
                                    </div>
                               </div>
                          </div>
+
                          {/* Footer Bottom */}
-                         <div className=' mt-5 pt-6 text-center text-sm'>
-                              <div className='mb-10 text-white h-[1.5px] w-full bg-gradient-to-r from-primary-light to-secondary-light rounded-full'></div>© {new Date().getFullYear()} <span className='text-gradient font-medium'>EG TEAM</span>. Tất cả các quyền được bảo lưu.
+                         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm">
+                              © {new Date().getFullYear()} <span className="text-[#00cccc] font-medium">EG TEAM</span>. Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.
                          </div>
                     </div>
                </footer>
+
           </main>
      );
 }
