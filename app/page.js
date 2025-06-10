@@ -540,7 +540,7 @@ export default function Home() {
 
                <section id='introduce' className='relative w-full overflow-hidden'>
 
-                    <div className='container mx-auto px-4'>
+                    <div data-aos='zoom-out-up' className='container mx-auto px-4'>
                          <IntroVideoSection />
                     </div>
                </section>
@@ -732,8 +732,8 @@ export default function Home() {
                          </div>
 
                          {/* Footer Bottom */}
-                         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-justify">
-                              © {new Date().getFullYear()} <span className="text-[#00cccc] font-medium">EG TEAM</span>. Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.
+                         <div className="mt-8 pt-8 border-t border-white/20 lg:text-center text-sm text-justify">
+                              ©{new Date().getFullYear()} <span className="text-[#00cccc] font-medium">EG TEAM</span>. Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.
                          </div>
                     </div>
                </footer>
