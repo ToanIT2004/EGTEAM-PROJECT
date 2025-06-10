@@ -140,7 +140,7 @@ export default function Home() {
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Kiều Anh</h3>
-                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Smart Contract Dev</p>
+                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Blockchain Developer</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
 
@@ -166,36 +166,44 @@ export default function Home() {
                                                                                 className="rounded-full object-cover"
                                                                            />
                                                                       </div>
-                                                                      <div className="flex-1">
+                                                                      <div className="flex-1 pt-2">
                                                                            <h1 className="text-2xl font-bold text-gray-900 mb-1">Nguyễn Tô Kiều Anh</h1>
-                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Smart Contract Developer</p>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Thành viên</p>
                                                                       </div>
                                                                  </div>
                                                             </div>
 
                                                             {/* Content Section */}
-                                                            <div className="p-6 space-y-6">
+                                                            <div>
                                                                  {/* Introduction */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Chào mọi người! Mình là Kiều Anh, công việc hằng ngày của mình là nói chuyện với Solidity  và đảm bảo hợp đồng không có... cửa hậu!
-                                                                           <br></br>
-                                                                           Ngoài công việc, mình thích đọc manga và đi bơi ở những nơi vắng người sử dụng hồ bơi.
-                                                                           Mình rất yêu thích DeFi và luôn mơ về việc viết một contract “triệu người dùng” trong tương lai.
-                                                                           Trong team, mình là người kỹ tính, luôn double-check mọi thứ trước khi deploy.
-                                                                           Mình tin rằng: một dòng code an toàn hơn cả trăm lời xin lỗi khi có lỗi xảy ra.
-                                                                           Điều mình học được khi làm dự án là: không ai mạnh mãi, chỉ có teamwork là mãi đỉnh!
-                                                                           Blockchain cho mình cảm giác như khám phá vùng đất mới – nhiều tiềm năng, nhiều thử thách.
-                                                                           Hy vọng qua dự án này, mình có thể tiến gần hơn đến ước mơ làm dev trong một startup Web3.
-
+                                                                 <div className='max-h-[500px] overflow-y-auto p-4'>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Thông tin:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Họ và tên: Nguyễn Tô Kiều Anh.
                                                                       </p>
-                                                                 </div>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Chuyên môn: Công nghệ Blockchain, Smart Contract.
+                                                                      </p>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Kinh nghiệm: Sinh viên thực tập 1 năm trong lĩnh vực phát triển Web3, Smart Contract.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Giới thiệu:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi là Nguyễn Tô Kiều Anh – Blockchain Developer của nhóm EG Team. Với niềm đam mê sâu sắc đối với công nghệ sổ cái phân tán, tôi đã đồng hành cùng đội ngũ phát triển một nền tảng blockchain có tính minh bạch, bảo mật cao và tối ưu cho các ứng dụng thực tiễn. Tôi chịu trách nhiệm viết và triển khai các smart contract, xây dựng kiến trúc hệ thống Web3, tích hợp ví điện tử, và tham gia vào việc phát triển mạng blockchain Layer-1 riêng biệt. Ngoài ra, tôi cũng góp phần vào việc kiểm tra bảo mật hợp đồng thông minh và cải tiến cơ chế đồng thuận phù hợp với yêu cầu hệ thống.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Tầm nhìn:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi tin rằng Blockchain không chỉ là công nghệ của tương lai, mà là chìa khóa để xây dựng niềm tin số trong xã hội hiện đại. Với định hướng phát triển công nghệ vì cộng đồng, chúng tôi hướng đến việc tạo ra các giải pháp phi tập trung không chỉ an toàn và hiệu quả, mà còn dễ tiếp cận và ứng dụng vào đời sống, doanh nghiệp tại địa phương và trên toàn cầu.
+                                                                      </p>
 
-                                                                 {/* Education */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
-                                                                      <p className="text-gray-700 text-base font-medium">Đại học</p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Vai trò trong EG Team:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           - Thiết kế, viết và triển khai các Smart Contract bằng Solidity trên Ethereum và các nền tảng tương thích EVM.<br></br>
+                                                                           - Tham gia xây dựng mạng Blockchain riêng với cơ chế đồng thuận tùy chỉnh. <br></br>
+                                                                           - Tích hợp hệ thống Web3 và ví điện tử (Metamask, WalletConnect, v.v.). <br></br>
+                                                                           - Thực hiện kiểm thử bảo mật và tối ưu hiệu năng của hệ thống phi tập trung. <br></br>
+                                                                           - Phối hợp cùng nhóm kỹ thuật để trình bày giải pháp tại các sự kiện công nghệ, workshop và buổi pitching sản phẩm. <br></br>
+                                                                      </p>
                                                                  </div>
                                                             </div>
                                                        </DialogPanel>
@@ -213,7 +221,7 @@ export default function Home() {
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center text-[#017479] mb-2 transition-colors duration-300'>Minh Duy</h3>
-                                             <p className='text-center text-sm text-[#017479]'>UI/UX Designer</p>
+                                             <p className='text-center text-sm text-[#017479]'>AIoT</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
                                         {/* Modal Dialog */}
@@ -237,33 +245,42 @@ export default function Home() {
                                                                       </div>
                                                                       <div className="flex-1 pt-2">
                                                                            <h1 className="text-2xl font-bold text-gray-900 mb-1">Hồ Minh Duy</h1>
-                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">UI/UX Designer</p>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Thành viên</p>
                                                                       </div>
                                                                  </div>
                                                             </div>
 
                                                             {/* Content Section */}
-                                                            <div className="p-6 space-y-6">
+                                                            <div>
                                                                  {/* Introduction */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Xin chào! Mình là Minh Duy, mình đề cao sự ổn định và tin cậy, bởi một hệ thống chỉ thực sự tốt khi hoạt động ổn định trong mọi điều kiện.
-                                                                           <br></br>
-                                                                           Vai trò của mình là cầu nối giữa phát triển và chất lượng, đảm bảo sản phẩm hoàn chỉnh khi đến tay người dùng.
-                                                                           Khi làm việc, mình thường tạo ra nhiều lỗi để… fix và học. Cứ vấp rồi mới nhớ lâu!
-                                                                           Mình thích cảm giác “tìm ra bug trước khi người dùng thấy nó” – cảm giác như giải một câu đố lớn.
-                                                                           Mình luôn tin rằng sản phẩm chỉ thực sự tốt khi được kiểm thử kỹ càng, dù backend hay blockchain.
-                                                                           Ngoài đời, mình là người khá hài hước và thường xuyên “tấu hài” khi team đang stress vì deadline.
-                                                                           Tham gia dự án giúp mình học được nhiều thứ hơn là chỉ code – còn là tư duy hệ thống.
-                                                                           Rất vui vì được là một phần trong hành trình xây dựng blockchain từ con số 0!
+                                                                 <div className='max-h-[500px] overflow-y-auto p-4'>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Thông tin:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Họ và tên: Hồ Minh Duy.
                                                                       </p>
-                                                                 </div>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Chuyên môn: Internet of Things (IoT), Hệ thống tự động hóa, Trí tuệ nhân tạo (AI), Cơ sở dữ liệu PostgreSQL.
+                                                                      </p>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Kinh nghiệm: Sinh viên thực tập 6 tháng trong lĩnh vực phát triển hệ thống IoT thông minh, tích hợp cảm biến, điều khiển thiết bị tự động và xử lý dữ liệu bằng AI.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Giới thiệu:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi là Hồ Minh Duy – IoT Developer trong nhóm EG Team, nơi chúng tôi không ngừng nghiên cứu và hiện thực hóa các giải pháp tự động hóa thông minh phục vụ đời sống và sản xuất. Với nền tảng chuyên sâu về hệ thống nhúng và trí tuệ nhân tạo, tôi đã cùng đội nhóm thiết kế và triển khai các mô hình IoT tích hợp cảm biến, xử lý dữ liệu thời gian thực, và tự động đưa ra quyết định dựa trên thuật toán học máy. Tôi chịu trách nhiệm phát triển kiến trúc kết nối thiết bị, lưu trữ và phân tích dữ liệu trên PostgreSQL, cũng như tối ưu khả năng vận hành của hệ thống.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Tầm nhìn:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Chúng tôi tin rằng IoT và AI sẽ là chìa khóa mở ra một kỷ nguyên mới về tự động hóa và dữ liệu thông minh. Mục tiêu của chúng tôi không chỉ là điều khiển thiết bị từ xa, mà còn là tạo ra những hệ thống có khả năng học hỏi, thích nghi và tối ưu hóa theo từng môi trường ứng dụng – từ nhà ở thông minh đến các nhà máy công nghiệp.
+                                                                      </p>
 
-                                                                 {/* Education */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Vai trò trong EG Team:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           - Thiết kế và phát triển hệ thống IoT với các thiết bị cảm biến, vi điều khiển và kết nối mạng.<br></br>
+                                                                           - Tích hợp AI vào quy trình xử lý dữ liệu để phân tích hành vi và ra quyết định tự động. <br></br>
+                                                                           - Xây dựng hệ thống lưu trữ và quản lý dữ liệu với PostgreSQL, đảm bảo khả năng mở rộng và truy vấn hiệu quả. <br></br>
+                                                                           - Kiểm thử hệ thống thực tế, đo lường hiệu suất và tối ưu luồng dữ liệu từ thiết bị đến backend. <br></br>
+                                                                           - Đại diện kỹ thuật trình bày giải pháp tại các buổi demo công nghệ và hội thảo về IoT & AI. <br></br>
+                                                                      </p>
                                                                  </div>
                                                             </div>
                                                        </DialogPanel>
@@ -305,41 +322,46 @@ export default function Home() {
                                                                                 className="rounded-full object-cover"
                                                                            />
                                                                       </div>
-                                                                      <div className="flex-1">
-                                                                           <h1 className="text-2xl font-bold text-gray-900">Lìu Hỉn Phát</h1>
-                                                                           <p className="text-cyan-500 font-semibold text-lg">Trưởng Nhóm EG Team – Dự án Blockchain</p>
-                                                                           <p className='text-base font-medium'>Sinh viên thực tập</p>
+                                                                      <div className="flex-1 mt-3">
+                                                                           <h3 className="text-xl font-bold text-gray-900">Lìu Hỉn Phát</h3>
+                                                                           <p className="text-cyan-500 font-semibold text-lg">Trưởng Nhóm EG Team</p>
                                                                       </div>
                                                                  </div>
                                                             </div>
 
                                                             {/* Content Section */}
-                                                            <div className="p-6">
+                                                            <div>
                                                                  {/* Introduction */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900">Giới thiệu:</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Tôi là Lìu Hỉn Phát – trưởng nhóm EG Team của dự án Blockchain. Với nền tảng chuyên sâu về Công nghệ Thông tin và niềm đam mê với công nghệ phi tập trung, tôi và đội ngũ đã cùng nhau xây dựng và phát triển một hệ sinh thái blockchain minh bạch, bảo mật và hướng đến ứng dụng thực tế.
-                                                                           Tôi chịu trách nhiệm định hướng kỹ thuật, thiết kế kiến trúc hệ thống blockchain layer-1, phát triển các thuật toán đồng thuận (bao gồm cả thuật toán tùy chỉnh như Proof of Tracing), tối ưu hiệu suất và đảm bảo các yếu tố bảo mật cho mạng lưới.
+                                                                 <div className='max-h-[500px] overflow-y-auto p-4'>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Thông tin:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Họ và tên: Lìu Hỉn Phát
                                                                       </p>
-                                                                      <h2 className="text-lg font-semibold text-gray-900">Tầm nhìn:</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Dẫn dắt kiến trúc kỹ thuật và chiến lược phát triển hệ thống
-                                                                           Quản lý và phân công công việc kỹ thuật cho toàn đội
-                                                                           Kiểm duyệt mã nguồn và bảo mật cho toàn bộ hệ thống blockchain
-                                                                           Đại diện kỹ thuật cho các buổi pitching, thuyết trình và hội thảo công nghệ
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Chức vụ: Trưởng Nhóm EG Team – Dự án Blockchain Layer 1
+                                                                      </p>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Chuyên môn: Công nghệ Blockchain, Smart Contract, Bảo mật hệ thống phi tập trung
+                                                                      </p>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Kinh nghiệm: Sinh viên thực tập 1 năm trong lĩnh vực phát triển Web3, Smart Contract, và xây dựng mạng Blockchain riêng
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Giới thiệu:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi là Lìu Hỉn Phát – trưởng nhóm EG Team của dự án Blockchain. Với nền tảng chuyên sâu về Công nghệ Thông tin và niềm đam mê với công nghệ phi tập trung, tôi và đội ngũ đã cùng nhau xây dựng và phát triển một hệ sinh thái Blockchain minh bạch, bảo mật và hướng đến ứng dụng thực tế.
+                                                                           Tôi chịu trách nhiệm định hướng kỹ thuật, thiết kế kiến trúc hệ thống Blockchain Layer-1, phát triển các thuật toán đồng thuận (bao gồm cả thuật toán tùy chỉnh như Proof of Tracing), tối ưu hiệu suất và đảm bảo các yếu tố bảo mật cho mạng lưới.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Tầm nhìn:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Chúng tôi tin vào một tương lai nơi Blockchain không chỉ là công nghệ, mà còn là nền tảng của sự tin tưởng. Dự án không chỉ đơn thuần giải quyết bài toán phi tập trung, mà còn tạo ra giải pháp phù hợp với nhu cầu thực tế tại địa phương và quốc tế.
                                                                       </p>
 
-                                                                      <h2 className="text-lg font-semibold text-gray-900">Vai trò trong Core Team:</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Dẫn dắt kiến trúc kỹ thuật và chiến lược phát triển hệ thống
-                                                                           Quản lý và phân công công việc kỹ thuật cho toàn đội
-                                                                           Kiểm duyệt mã nguồn và bảo mật cho toàn bộ hệ thống blockchain
-                                                                           Đại diện kỹ thuật cho các buổi pitching, thuyết trình và hội thảo công nghệ
-                                                                      </p>
-                                                                      <h2 className="text-lg font-semibold text-gray-900">Chuyên môn:</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Công nghệ Blockchain, Smart Contract, Bảo mật hệ thống phi tập trung
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Vai trò trong EG Team:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Dẫn dắt kiến trúc kỹ thuật và chiến lược phát triển hệ thống.
+                                                                           Quản lý và phân công kỹ thuật cho toàn đội.
+                                                                           Kiểm duyệt mã nguồn và bảo mật cho toàn bộ hệ thống blockchain.
+                                                                           Đại diện kỹ thuật cho các buổi pitching, thuyết trình và hội thảo công nghệ.
                                                                       </p>
                                                                  </div>
                                                             </div>
@@ -358,7 +380,7 @@ export default function Home() {
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Hải Đăng</h3>
-                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Blockchain Dev</p>
+                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Blockchain Developer</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
 
@@ -383,34 +405,41 @@ export default function Home() {
                                                                       </div>
                                                                       <div className="flex-1 pt-2">
                                                                            <h1 className="text-2xl font-bold text-gray-900 mb-1">Mai Hải Đăng</h1>
-                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Blockchain Developer</p>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Thành viên</p>
                                                                       </div>
                                                                  </div>
                                                             </div>
 
                                                             {/* Content Section */}
-                                                            <div className="p-6 space-y-6">
+                                                            <div>
                                                                  {/* Introduction */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Hello mọi người! Mình là Hải Đăng, người thích “đào sâu” vào cấu trúc lõi của Blockchain.
-                                                                           Mình phụ trách phần consensus, network layer và kiến trúc dữ liệu cho chuỗi của team.
-                                                                           Lúc mới bắt đầu, mình từng choáng vì một block header có… 10 trường, nhưng giờ mình có thể phân tích block như một cuốn sách mở.
-                                                                           Mình đặc biệt quan tâm đến cơ chế đồng thuận – từ PoW, PoS đến những thuật toán mới như HotStuff.
-                                                                           Trong nhóm, mọi người hay gọi mình là “anh hacker hiền” vì lúc nào cũng thích debug mà… không phá gì cả.
-                                                                           Khi không code, mình hay chơi cờ vua và đọc tài liệu nghiên cứu về các blockchain lớn như Ethereum, Avalanche.
-                                                                           Mình từng dành cả đêm chỉ để tối ưu một vòng lặp xử lý giao dịch – vì đơn giản là “thích”.
-                                                                           Blockchain với mình không chỉ là công nghệ, mà còn là sự công bằng và minh bạch.
-                                                                           Mình rất mong dự án lần này sẽ là nền móng cho một thứ gì đó lớn hơn trong tương lai.
-                                                                           Let’s build something meaningful – từ những khối đầu tiên!
+                                                                 <div className='max-h-[500px] overflow-y-auto p-4'>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Thông tin:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Họ và tên: Mai Hải Đăng.
                                                                       </p>
-                                                                 </div>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Chuyên môn: Cyber Security, Blockchain.
+                                                                      </p>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Kinh nghiệm: Đã tham gia nhiều cuộc thi Hackathon, có kinh nghiệm xây dựng và triển khai một số ứng dụng phi tập trung (dApp) trên các hệ sinh thái blockchain khác nhau.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Giới thiệu:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi là Mai Hải Đăng, sinh viên Học viện Kỹ thuật mật mã, hiện đang đảm nhiệm vai trò Blockchain Developer tại EG Team – một các sinh viên đam mê nghiên cứu và phát triển các giải pháp công nghệ hiện đại, đặc biệt là trong lĩnh vực tự động hóa thông minh phục vụ đời sống và sản xuất. Với nền tảng vững chắc về Blockchain và An ninh mạng (Cyber Security), tôi luôn hướng đến việc xây dựng những ứng dụng có tính bảo mật cao, minh bạch và có giá trị thực tiễn.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Tầm nhìn:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Chúng tôi tin rằng Blockchain không chỉ là một công nghệ, mà còn là chìa khóa mở ra một kỷ nguyên mới – nơi mà niềm tin, sự minh bạch và quyền kiểm soát dữ liệu cá nhân được đặt lên hàng đầu. EG Team hướng đến việc góp phần xây dựng những giải pháp công nghệ bền vững, góp phần vào sự phát triển chung của xã hội số.
+                                                                      </p>
 
-                                                                 {/* Education */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Vai trò trong EG Team:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           - Thiết kế và phát triển các ứng dụng phi tập trung (dApp) dựa trên nền tảng blockchain.<br></br>
+                                                                           - Tích hợp các giao thức bảo mật trong kiến trúc hệ thống. <br></br>
+                                                                           - Tham gia nghiên cứu và triển khai các mô hình ứng dụng mới kết hợp giữa blockchain, AI và IoT. <br></br>
+                                                                           - Hỗ trợ team trong các cuộc thi công nghệ và các dự án thử nghiệm thực tế. <br></br>
+                                                                      </p>
                                                                  </div>
                                                             </div>
                                                        </DialogPanel>
@@ -428,7 +457,7 @@ export default function Home() {
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Chương Toàn</h3>
-                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Backend Dev</p>
+                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Backend Developer</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
 
@@ -460,34 +489,43 @@ export default function Home() {
                                                                       </div>
                                                                       <div className="flex-1 pt-2">
                                                                            <h1 className="text-2xl font-bold text-gray-900 mb-1">Dương Phương Chương Toàn</h1>
-                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Backend Developer</p>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Thành viên</p>
                                                                       </div>
                                                                  </div>
                                                             </div>
 
                                                             {/* Content Section */}
-                                                            <div className="p-6 space-y-6">
+                                                            <div>
                                                                  {/* Introduction */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
-                                                                           Chào mọi người! Mình là Chương Toàn, backend developer của team và là người chống lưng âm thầm cho blockchain hoạt động trơn tru.
-                                                                           Mình phụ trách xây dựng API, quản lý cơ sở dữ liệu, đồng thời kiêm luôn việc deploy server và giám sát hệ thống.
-                                                                           Trong nhóm, mọi người thường gọi mình là “ông chú của hệ thống” – vì mình lúc nào cũng phải chăm backend “ăn ngủ đủ”.
-                                                                           Mình sử dụng Node.js, MongoDB và Docker để đảm bảo backend không chỉ chạy được mà còn ổn định lâu dài.
-                                                                           Ngoài công việc, mình thích sửa máy tính và vọc vạch các công cụ tự động hóa.
-                                                                           Mình xem backend là “xương sống” của toàn bộ hệ thống – không thấy nhưng luôn phải vững.
-                                                                           Dù không trực tiếp viết smart contract, nhưng mình luôn đồng hành cùng team để dữ liệu luân chuyển mượt mà.
-                                                                           Mình thích làm việc trong môi trường công nghệ vì luôn có thứ mới để học, để vượt giới hạn bản thân.
-                                                                           Hy vọng mọi người sẽ thấy rõ “bàn tay vô hình” của backend trong sản phẩm lần này nhé!
-                                                                           Mình từng tham gia một số hackathon về Web3 và mong muốn ứng dụng công nghệ vào thực tiễn xã hội Việt Nam.
+                                                                 <div className='max-h-[500px] overflow-y-auto p-4'>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Thông tin:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Họ và tên: Dương Phương Chương Toàn
                                                                       </p>
-                                                                 </div>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium">
+                                                                           Chuyên môn: Phát triển Backend với Node.js, MySQL, MongoDB, RESTful API
+                                                                      </p>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Kinh nghiệm: Sinh viên thực tập 3 tháng trong lĩnh vực phát triển backend, xây dựng API và làm việc với cơ sở dữ liệu quan hệ (MySQL) và NoSQL (MongoDB)
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Giới thiệu:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi là Dương Phương Chương Toàn – một backend developer với niềm đam mê xây dựng các ứng dụng mạnh mẽ, có khả năng mở rộng và hiệu suất cao. Với kinh nghiệm chuyên sâu về Node.js, tôi có khả năng tạo ra các RESTful API linh hoạt, dễ bảo trì và tích hợp. Tôi có kinh nghiệm làm việc với cả cơ sở dữ liệu quan hệ (MySQL) và NoSQL (MongoDB), cho phép tôi lựa chọn giải pháp lưu trữ phù hợp nhất cho từng dự án.
+                                                                      </p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Tầm nhìn:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           Tôi tin rằng một hệ thống backend mạnh mẽ là nền tảng cốt lõi cho bất kỳ sản phẩm công nghệ thành công nào. Chúng tôi không chỉ xây dựng những đoạn mã hiệu quả, mà còn phát triển giải pháp đáp ứng nhu cầu thực tế, dễ mở rộng, dễ bảo trì và sẵn sàng tích hợp với nhiều nền tảng khác nhau trong kỷ nguyên số.
+                                                                      </p>
 
-                                                                 {/* Education */}
-                                                                 <div>
-                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
-                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                      <h2 className="text-base font-semibold text-gray-900 mb-1">Vai trò trong EG Team:</h2>
+                                                                      <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
+                                                                           - Thiết kế và phát triển các API backend sử dụng Node.js và Express. <br></br>
+                                                                           - Tối ưu cơ sở dữ liệu MySQL và MongoDB cho hiệu năng và tính toàn vẹn dữ liệu. <br></br>
+                                                                           - Xây dựng hệ thống xác thực/ủy quyền bằng JWT, OAuth2. <br></br>
+                                                                           - Quản lý cấu trúc dự án, kiểm duyệt mã nguồn và hỗ trợ triển khai hệ thống trên môi trường staging/production. <br></br>
+                                                                           - Tham gia pitching, trình bày giải pháp backend tại các buổi demo nội bộ và hội thảo công nghệ. <br></br>
+
+                                                                      </p>
                                                                  </div>
                                                             </div>
                                                        </DialogPanel>
@@ -522,7 +560,7 @@ export default function Home() {
                                         <div className='mx-auto w-12 h-12 mb-4'>
                                              <Image src='/images/layer1.png' alt='Blockchain' width={48} height={48} className='text-[#00E0FF]' />
                                         </div>
-                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>Blockchain Layer 1 &: Nghiên Cứu và Triển Khai Chuỗi Khối Tốc Độ Cao, Bảo Mật, Hỗ trợ hợp đồng thông minh</p>
+                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>Blockchain Layer 1 &: Nghiên Cứu và Triển Khai Chuỗi Khối Tốc Độ Cao, Bảo Mật, Hỗ Trợ Hợp Đồng Thông Minh</p>
                                    </div>
 
                                    {/* Field 2 */}
@@ -694,7 +732,7 @@ export default function Home() {
                          </div>
 
                          {/* Footer Bottom */}
-                         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm">
+                         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-justify">
                               © {new Date().getFullYear()} <span className="text-[#00cccc] font-medium">EG TEAM</span>. Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.
                          </div>
                     </div>
