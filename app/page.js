@@ -4,16 +4,21 @@ import './globals.css';
 import Navbar from '../components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import "swiper/css";
 import "swiper/css/effect-cards";
-import ReviewSlider from "../components/Review/ReviewSliderVideo";
 import IntroVideoSection from '@/components/Review/IntroVideoSection ';
-import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-
+import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
 
 
 export default function Home() {
+     const [open1, setOpen1] = useState(false)
+     const [open2, setOpen2] = useState(false)
+     const [open3, setOpen3] = useState(false)
+     const [open4, setOpen4] = useState(false)
+     const [open5, setOpen5] = useState(false)
+
+
      useEffect(() => {
           oncanplay
           AOS.init({
@@ -100,110 +105,371 @@ export default function Home() {
                          {/* Team Members Carousel */}
                          <div data-aos='fade-left' className='relative px-10 '>
                               <div className='flex flex-wrap justify-center gap-8 md:gap-6'>
-
                                    {/* Team Member 1 */}
                                    <div className='w-full md:w-[220px] group transition-all duration-500 hover:scale-105 cursor-pointer'>
-                                        <div className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
-                                        {/* A */}
+                                        <div onClick={() => setOpen1(true)} className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
+                                             {/* A */}
                                              <div className='w-28 h-28 mx-auto rounded-full overflow-hidden mb-6 bg-gradient-to-b from-[rgba(0,255,123,0.15)] to-[rgba(0,224,255,0.15)] border-2 border-[#00E0FF]/40 group-hover:border-[#00E0FF]/70 transition-all duration-300'>
                                                   <div className='w-full h-full bg-dark-light/80 flex items-center justify-center text-2xl font-bold text-[#00E0FF]/80'>
-                                                       <Image src='/images/kieuanh.jpg' alt='Kiều Anh' width={110} height={110} className='mt-[70px] rounded-full object-cover' />
+                                                       <Image src='/images/_kieuanh.jpg' alt='Kiều Anh' width={110} height={110} className='rounded-full object-cover' />
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Kiều Anh</h3>
-                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Blockchain Dev</p>
+                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Smart Contract Dev</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
+
+                                        {/* Modal Dialog */}
+                                        <Dialog open={open1} onClose={() => setOpen1(false)} className="relative z-50">
+                                             <DialogBackdrop
+                                                  transition
+                                                  className="fixed inset-0 bg-black/50 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in"
+                                             />
+
+                                             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                                                  <div className="flex min-h-full items-center justify-center p-4 text-center">
+                                                       <DialogPanel transition className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in w-[700px] data-[closed]:scale-95">
+                                                            {/* Header Section */}
+                                                            <div className="bg-gradient-to-r from-cyan-100 to-cyan-50 p-6 relative">
+                                                                 <div className="flex items-start gap-4">
+                                                                      <div className="w-20 h-20 bg-gray-200 rounded-full border-4 border-cyan-200 flex-shrink-0 overflow-hidden">
+                                                                           <Image
+                                                                                src="/images/_kieuanh.jpg"
+                                                                                alt="Kiều Anh"
+                                                                                width={110}
+                                                                                height={110}
+                                                                                className="rounded-full object-cover"
+                                                                           />
+                                                                      </div>
+                                                                      <div className="flex-1">
+                                                                           <h1 className="text-2xl font-bold text-gray-900 mb-1">Nguyễn Tô Kiều Anh</h1>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Smart Contract Developer</p>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+
+                                                            {/* Content Section */}
+                                                            <div className="p-6 space-y-6">
+                                                                 {/* Introduction */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Chào mọi người! Mình là Kiều Anh, công việc hằng ngày của mình là nói chuyện với Solidity  và đảm bảo hợp đồng không có... cửa hậu!
+                                                                           <br></br>
+                                                                           Ngoài công việc, mình thích đọc manga và đi bơi ở những nơi vắng người sử dụng hồ bơi.
+                                                                           Mình rất yêu thích DeFi và luôn mơ về việc viết một contract “triệu người dùng” trong tương lai.
+                                                                           Trong team, mình là người kỹ tính, luôn double-check mọi thứ trước khi deploy.
+                                                                           Mình tin rằng: một dòng code an toàn hơn cả trăm lời xin lỗi khi có lỗi xảy ra.
+                                                                           Điều mình học được khi làm dự án là: không ai mạnh mãi, chỉ có teamwork là mãi đỉnh!
+                                                                           Blockchain cho mình cảm giác như khám phá vùng đất mới – nhiều tiềm năng, nhiều thử thách.
+                                                                           Hy vọng qua dự án này, mình có thể tiến gần hơn đến ước mơ làm dev trong một startup Web3.
+
+                                                                      </p>
+                                                                 </div>
+
+                                                                 {/* Education */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
+                                                                      <p className="text-gray-700 text-base font-medium">Đại học</p>
+                                                                 </div>
+                                                            </div>
+                                                       </DialogPanel>
+                                                  </div>
+                                             </div>
+                                        </Dialog>
                                    </div>
 
                                    {/* Team Member 2 */}
                                    <div className='w-full md:w-[220px] group transition-all duration-500 hover:scale-105 cursor-pointer'>
-                                        <div className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
+                                        <div onClick={() => setOpen2(true)} className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
                                              <div className='w-28 h-28 mx-auto rounded-full overflow-hidden mb-6 bg-gradient-to-b from-[rgba(0,255,123,0.15)] to-[rgba(0,224,255,0.15)] border-2 border-[#00E0FF]/40 group-hover:border-[#00E0FF]/70 transition-all duration-300'>
                                                   <div className='w-full h-full bg-dark-light/80 flex items-center justify-center text-2xl font-bold text-[#00E0FF]/80'>
-                                                       <Image src='/images/minhduy.jpg' alt='Chương Toàn' width={110} height={110} className='mt-[10px] rounded-full object-cover' />
+                                                       <Image src='/images/_minhduy.jpg' alt='Minh Duy' width={110} height={110} className='rounded-full object-cover' />
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center text-[#017479] mb-2 transition-colors duration-300'>Minh Duy</h3>
                                              <p className='text-center text-sm text-[#017479]'>UI/UX Designer</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
+                                        {/* Modal Dialog */}
+                                        <Dialog open={open2} onClose={() => setOpen2(false)} className="relative z-50">
+                                             <DialogBackdrop transition className="fixed inset-0 bg-black/50 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in" />
+
+                                             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                                                  <div className="flex min-h-full items-center justify-center p-4 text-center">
+                                                       <DialogPanel transition className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in w-[700px] data-[closed]:scale-95">
+                                                            {/* Header Section */}
+                                                            <div className="bg-gradient-to-r from-cyan-100 to-cyan-50 p-6 relative">
+                                                                 <div className="flex items-start gap-4">
+                                                                      <div className="w-20 h-20 bg-gray-200 rounded-full border-4 border-cyan-200 flex-shrink-0 overflow-hidden">
+                                                                           <Image
+                                                                                src="/images/_minhduy.jpg"
+                                                                                alt="Minh Duy"
+                                                                                width={110}
+                                                                                height={110}
+                                                                                className="rounded-full object-cover"
+                                                                           />
+                                                                      </div>
+                                                                      <div className="flex-1 pt-2">
+                                                                           <h1 className="text-2xl font-bold text-gray-900 mb-1">Hồ Minh Duy</h1>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">UI/UX Designer</p>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+
+                                                            {/* Content Section */}
+                                                            <div className="p-6 space-y-6">
+                                                                 {/* Introduction */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Xin chào! Mình là Minh Duy, mình đề cao sự ổn định và tin cậy, bởi một hệ thống chỉ thực sự tốt khi hoạt động ổn định trong mọi điều kiện.
+                                                                           <br></br>
+                                                                           Vai trò của mình là cầu nối giữa phát triển và chất lượng, đảm bảo sản phẩm hoàn chỉnh khi đến tay người dùng.
+                                                                           Khi làm việc, mình thường tạo ra nhiều lỗi để… fix và học. Cứ vấp rồi mới nhớ lâu!
+                                                                           Mình thích cảm giác “tìm ra bug trước khi người dùng thấy nó” – cảm giác như giải một câu đố lớn.
+                                                                           Mình luôn tin rằng sản phẩm chỉ thực sự tốt khi được kiểm thử kỹ càng, dù backend hay blockchain.
+                                                                           Ngoài đời, mình là người khá hài hước và thường xuyên “tấu hài” khi team đang stress vì deadline.
+                                                                           Tham gia dự án giúp mình học được nhiều thứ hơn là chỉ code – còn là tư duy hệ thống.
+                                                                           Rất vui vì được là một phần trong hành trình xây dựng blockchain từ con số 0!
+                                                                      </p>
+                                                                 </div>
+
+                                                                 {/* Education */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                 </div>
+                                                            </div>
+                                                       </DialogPanel>
+                                                  </div>
+                                             </div>
+                                        </Dialog>
                                    </div>
 
                                    {/* Team Member 3 - Center (Featured) */}
                                    <div className='w-full md:w-[280px] z-10 group transition-all duration-500 hover:scale-105 cursor-pointer'>
-                                        <div className='relative p-7 rounded-2xl border-2 border-[#00E0FF] bg-gradient-to-b from-white/5 to-transparent backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_25px_rgba(0,224,255,0.5)] h-full'>
+                                        <div onClick={() => setOpen3(true)} className='relative p-7 rounded-2xl border-2 border-[#00E0FF] bg-gradient-to-b from-white/5 to-transparent backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_25px_rgba(0,224,255,0.5)] h-full'>
                                              <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00FF7B] to-[#00D768] text-black text-xs font-bold py-1.5 px-4 rounded-full shadow-lg'>Đội trưởng</div>
                                              <div className='w-36 h-36 mx-auto rounded-full overflow-hidden mb-6 bg-gradient-to-b from-[rgba(0,255,123,0.3)] to-[rgba(0,224,255,0.3)] border-2 border-[#00E0FF] group-hover:shadow-[0_0_15px_rgba(0,224,255,0.5)] transition-all duration-300'>
                                                   <div className='w-full h-full bg-dark-light/70 flex items-center justify-center text-3xl font-bold text-[#00E0FF]'>
-                                                       <Image src='/images/avt-phat.jpg' alt='Hỉn Phát' width={160} height={160} className='mt-10 rounded-full' />
+                                                       <Image src='/images/_hinphat.jpg' alt='Hỉn Phát' width={160} height={160} className='rounded-full object-cover' />
                                                   </div>
                                              </div>
                                              <h3 className='text-xl font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Lìu Hìn Phát</h3>
                                              <p className='text-[#00E0FF] text-center text-[#017479]'>Blockchain Architect</p>
                                              <div className='h-0.5 w-1/3 group-hover:w-full bg-gradient-to-r from-[#00FF7B] to-[#00E0FF] mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
+
+                                        {/* Modal Dialog */}
+                                        <Dialog open={open3} onClose={() => setOpen3(false)} className="relative z-50">
+                                             <DialogBackdrop transition className="fixed inset-0 bg-black/50 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in" />
+
+                                             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                                                  <div className="flex min-h-full items-center justify-center p-4 text-center">
+                                                       <DialogPanel transition className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in w-[700px] data-[closed]:scale-95">
+                                                            {/* Header Section */}
+                                                            <div className="bg-gradient-to-r from-cyan-100 to-cyan-50 p-6 relative">
+                                                                 <div className="flex items-start gap-4">
+                                                                      <div className="w-20 h-20 bg-gray-200 rounded-full border-4 border-cyan-200 flex-shrink-0 overflow-hidden">
+                                                                           <Image
+                                                                                src="/images/_hinphat.jpg"
+                                                                                alt="Hỉn Phát"
+                                                                                width={110}
+                                                                                height={110}
+                                                                                className="rounded-full object-cover"
+                                                                           />
+                                                                      </div>
+                                                                      <div className="flex-1 pt-2">
+                                                                           <h1 className="text-2xl font-bold text-gray-900 mb-1">Lìu Hỉn Phát</h1>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Blockchain Architect</p>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+
+                                                            {/* Content Section */}
+                                                            <div className="p-6 space-y-6">
+                                                                 {/* Introduction */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Xin chào mọi người! Mình là Hỉn Phát, thủ lĩnh tinh thần (và cả deadline) của team Blockchain!
+                                                                           Mình có niềm đam mê mãnh liệt với những dòng code tạo nên thế giới phi tập trung.
+                                                                           Công việc chính của mình là định hướng kiến trúc chuỗi khối, tối ưu thuật toán đồng thuận và… hối team làm bài.
+                                                                           Ngoài giờ làm việc căng thẳng, mình thích đọc whitepaper, đọc thử testnet và thỉnh thoảng cuối tuần sẽ tổ chức offline cùng team.
+                                                                           Là người cầu toàn, mình luôn muốn mọi thứ thật chỉnh chu từ dòng code đến slide thuyết trình.
+                                                                           Đối với mình, làm việc nhóm không chỉ là hoàn thành task mà còn là phát triển cùng nhau.
+                                                                           Dự án lần này là bước đi táo bạo nhưng mình tin vào sức mạnh của team.
+                                                                           Rất vui được đồng hành cùng mọi người trên hành trình khám phá Blockchain!
+
+                                                                      </p>
+                                                                 </div>
+
+                                                                 {/* Education */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                 </div>
+                                                            </div>
+                                                       </DialogPanel>
+                                                  </div>
+                                             </div>
+                                        </Dialog>
                                    </div>
 
                                    {/* Team Member 4 */}
                                    <div className='w-full md:w-[220px] group transition-all duration-500 hover:scale-105 cursor-pointer'>
-                                        <div className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
+                                        <div onClick={() => setOpen4(true)} className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
                                              <div className='w-28 h-28 mx-auto rounded-full overflow-hidden mb-6 bg-gradient-to-b from-[rgba(0,255,123,0.15)] to-[rgba(0,224,255,0.15)] border-2 border-[#00E0FF]/40 group-hover:border-[#00E0FF]/70 transition-all duration-300'>
                                                   <div className='w-full h-full bg-dark-light/80 flex items-center justify-center text-2xl font-bold text-[#00E0FF]/80'>
-                                                       <Image src='/images/haidang.jpg' alt='Chương Toàn' width={110} height={110} className='mt-[60px] rounded-full' />
+                                                       <Image src='/images/_haidang.jpg' alt='Chương Toàn' width={110} height={110} className='rounded-full object-cover' />
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Hải Đăng</h3>
-                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Smart Contract Dev</p>
+                                             <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Blockchain Dev</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
+
+                                        {/* Modal Dialog */}
+                                        <Dialog open={open4} onClose={() => setOpen4(false)} className="relative z-50">
+                                             <DialogBackdrop transition className="fixed inset-0 bg-black/50 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in" />
+
+                                             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                                                  <div className="flex min-h-full items-center justify-center p-4 text-center">
+                                                       <DialogPanel transition className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in w-[700px] data-[closed]:scale-95">
+                                                            {/* Header Section */}
+                                                            <div className="bg-gradient-to-r from-cyan-100 to-cyan-50 p-6 relative">
+                                                                 <div className="flex items-start gap-4">
+                                                                      <div className="w-20 h-20 bg-gray-200 rounded-full border-4 border-cyan-200 flex-shrink-0 overflow-hidden">
+                                                                           <Image
+                                                                                src="/images/_haidang.jpg"
+                                                                                alt="Minh Duy"
+                                                                                width={110}
+                                                                                height={110}
+                                                                                className="rounded-full object-cover"
+                                                                           />
+                                                                      </div>
+                                                                      <div className="flex-1 pt-2">
+                                                                           <h1 className="text-2xl font-bold text-gray-900 mb-1">Mai Hải Đăng</h1>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Blockchain Developer</p>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+
+                                                            {/* Content Section */}
+                                                            <div className="p-6 space-y-6">
+                                                                 {/* Introduction */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Hello mọi người! Mình là Hải Đăng, người thích “đào sâu” vào cấu trúc lõi của Blockchain.
+                                                                           Mình phụ trách phần consensus, network layer và kiến trúc dữ liệu cho chuỗi của team.
+                                                                           Lúc mới bắt đầu, mình từng choáng vì một block header có… 10 trường, nhưng giờ mình có thể phân tích block như một cuốn sách mở.
+                                                                           Mình đặc biệt quan tâm đến cơ chế đồng thuận – từ PoW, PoS đến những thuật toán mới như HotStuff.
+                                                                           Trong nhóm, mọi người hay gọi mình là “anh hacker hiền” vì lúc nào cũng thích debug mà… không phá gì cả.
+                                                                           Khi không code, mình hay chơi cờ vua và đọc tài liệu nghiên cứu về các blockchain lớn như Ethereum, Avalanche.
+                                                                           Mình từng dành cả đêm chỉ để tối ưu một vòng lặp xử lý giao dịch – vì đơn giản là “thích”.
+                                                                           Blockchain với mình không chỉ là công nghệ, mà còn là sự công bằng và minh bạch.
+                                                                           Mình rất mong dự án lần này sẽ là nền móng cho một thứ gì đó lớn hơn trong tương lai.
+                                                                           Let’s build something meaningful – từ những khối đầu tiên!
+                                                                      </p>
+                                                                 </div>
+
+                                                                 {/* Education */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                 </div>
+                                                            </div>
+                                                       </DialogPanel>
+                                                  </div>
+                                             </div>
+                                        </Dialog>
                                    </div>
 
                                    {/* Team Member 5 */}
                                    <div className='w-full md:w-[220px] group transition-all duration-500 hover:scale-105 cursor-pointer'>
-                                        <div className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
+                                        <div onClick={() => setOpen5(true)} className='relative p-6 rounded-2xl border border-[#00E0FF] bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,224,255,0.4)] h-full'>
                                              <div className='w-28 h-28 mx-auto rounded-full overflow-hidden mb-6 bg-gradient-to-b from-[rgba(0,255,123,0.15)] to-[rgba(0,224,255,0.15)] border-2 border-[#00E0FF]/40 group-hover:border-[#00E0FF]/70 transition-all duration-300'>
                                                   <div className='w-full h-full bg-dark-light/80 flex items-center justify-center text-2xl font-bold text-[#00E0FF]/80'>
-                                                       <Image src='/images/chuongtoan.png' alt='Chương Toàn' width={110} height={110} className='mt-4 rounded-full object-cover' />
+                                                       <Image src='/images/_chuongtoan.jpg' alt='Chương Toàn' width={110} height={110} className='mt-2 rounded-full object-cover' />
                                                   </div>
                                              </div>
                                              <h3 className='text-lg font-bold text-center mb-2 text-[#017479] transition-colors duration-300'>Chương Toàn</h3>
                                              <p className='text-[#00E0FF]/80 text-center text-sm text-[#017479]'>Backend Dev</p>
                                              <div className='h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#00FF7B]/50 to-[#00E0FF]/50 mt-4 transition-all duration-500 mx-auto'></div>
                                         </div>
+
+                                        {/* Modal Dialog */}
+                                        <Dialog open={open5} onClose={() => setOpen5(false)} className="relative z-50">
+                                             <DialogBackdrop transition className="fixed inset-0 bg-black/50 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in" />
+
+                                             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                                                  <div className="flex min-h-full items-center justify-center p-4 text-center">
+                                                       <DialogPanel transition className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in w-[700px] data-[closed]:scale-95">
+                                                            {/* Header Section */}
+                                                            <div className="bg-gradient-to-r from-cyan-100 to-cyan-50 p-6 relative">
+                                                                 <div className="flex items-start gap-4">
+                                                                      <div className="w-20 h-20 bg-gray-200 rounded-full border-4 border-cyan-200 flex-shrink-0 overflow-hidden">
+                                                                           <Image
+                                                                                src="/images/_chuongtoan.jpg"
+                                                                                alt="Minh Duy"
+                                                                                width={110}
+                                                                                height={110}
+                                                                                className="rounded-full object-cover"
+                                                                           />
+                                                                      </div>
+                                                                      <div className="flex-1 pt-2">
+                                                                           <h1 className="text-2xl font-bold text-gray-900 mb-1">Dương Phương Chương Toàn</h1>
+                                                                           <p className="text-cyan-500 font-semibold text-lg mb-2">Backend Developer</p>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+
+                                                            {/* Content Section */}
+                                                            <div className="p-6 space-y-6">
+                                                                 {/* Introduction */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Giới thiệu</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">
+                                                                           Chào mọi người! Mình là Chương Toàn, backend developer của team và là người chống lưng âm thầm cho blockchain hoạt động trơn tru.
+                                                                           Mình phụ trách xây dựng API, quản lý cơ sở dữ liệu, đồng thời kiêm luôn việc deploy server và giám sát hệ thống.
+                                                                           Trong nhóm, mọi người thường gọi mình là “ông chú của hệ thống” – vì mình lúc nào cũng phải chăm backend “ăn ngủ đủ”.
+                                                                           Mình sử dụng Node.js, MongoDB và Docker để đảm bảo backend không chỉ chạy được mà còn ổn định lâu dài.
+                                                                           Ngoài công việc, mình thích sửa máy tính và vọc vạch các công cụ tự động hóa.
+                                                                           Mình xem backend là “xương sống” của toàn bộ hệ thống – không thấy nhưng luôn phải vững.
+                                                                           Dù không trực tiếp viết smart contract, nhưng mình luôn đồng hành cùng team để dữ liệu luân chuyển mượt mà.
+                                                                           Mình thích làm việc trong môi trường công nghệ vì luôn có thứ mới để học, để vượt giới hạn bản thân.
+                                                                           Hy vọng mọi người sẽ thấy rõ “bàn tay vô hình” của backend trong sản phẩm lần này nhé!
+                                                                           Mình từng tham gia một số hackathon về Web3 và mong muốn ứng dụng công nghệ vào thực tiễn xã hội Việt Nam.
+                                                                      </p>
+                                                                 </div>
+
+                                                                 {/* Education */}
+                                                                 <div>
+                                                                      <h2 className="text-lg font-semibold text-gray-900 mb-3">Học vấn</h2>
+                                                                      <p className="text-gray-700 text-base leading-relaxed text-justify font-medium">Đại học</p>
+                                                                 </div>
+                                                            </div>
+                                                       </DialogPanel>
+                                                  </div>
+                                             </div>
+                                        </Dialog>
                                    </div>
                               </div>
                          </div>
                     </div>
                </section>
 
-               {/* Video Introduction Section */}
-               {/* <section className='relative w-full   lg:py-20 '>
-                    <div data-aos="zoom-in" className='text-center mb-10'>
-                         <ReviewSlider />
-                    </div>
-               </section> */}
-                <section className='relative w-full py-20 overflow-hidden'>
-                    
+               <section id='introduce' className='relative w-full overflow-hidden'>
+
                     <div className='container mx-auto px-4'>
                          <IntroVideoSection />
-                         {/* <div className='text-center mb-12'>
-                              <p className='text-[#00E0FF] text-sm font-medium mb-2'>//VIDEO//</p>
-                              <h2 className='text-[28px] md:text-[32px] lg:text-[36px] font-bold text-center text-[#00D768]'>VIDEO GIỚI THIỆU</h2>
-                              <div className='h-[2px] w-full max-w-[800px] mx-auto bg-gradient-to-r from-transparent via-[#00E0FF] to-transparent mt-2'></div>
-                         </div> */}
-
-                         {/* <div className='max-w-[1285px] max-h-[567px] mx-auto relative'>
-                              <div className='rounded-3xl border-2 border-[#00E0FF] overflow-hidden aspect-video relative group hover:shadow-[0_0_25px_rgba(0,224,255,0.4)] transition-all duration-500'>
-                                   <div className='absolute inset-0 bg-gradient-to-b from-[rgba(0,255,123,0.1)] to-[rgba(0,224,255,0.1)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none'></div>
-                                   <iframe src='https://www.youtube.com/embed/lgvDx7j0Sw4' title='EG TEAM Video' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen className='absolute inset-0 w-full h-full z-0'></iframe>
-                              </div>
-                         </div> */}
                     </div>
                </section>
 
 
-               <section id='services' className='relative w-full lg:py-20 overflow-hidden'>
+               <section id='services' className='relative w-full overflow-hidden'>
                     <div data-aos='zoom-out-up' className='container mx-auto px-4'>
                          <div className='text-center mb-12'>
                               <h2 className='text-[28px] md:text-[32px] lg:text-[36px] font-bold text-center text-[#00D768]'>LĨNH VỰC CHUYÊN MÔN</h2>
@@ -217,7 +483,7 @@ export default function Home() {
                                         <div className='mx-auto w-12 h-12 mb-4'>
                                              <Image src='/images/layer1.png' alt='Blockchain' width={48} height={48} className='text-[#00E0FF]' />
                                         </div>
-                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px]'>Blockchain Layer 1 &: Nghiên Cứu và Triển Khai Chuỗi Khối Tốc Độ Cao, Bảo Mật, Hỗ trợ hợp đồng thông minh</p>
+                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>Blockchain Layer 1 &: Nghiên Cứu và Triển Khai Chuỗi Khối Tốc Độ Cao, Bảo Mật, Hỗ trợ hợp đồng thông minh</p>
                                    </div>
 
                                    {/* Field 2 */}
@@ -225,7 +491,7 @@ export default function Home() {
                                         <div className='mx-auto w-12 h-12 mb-4'>
                                              <Image src='/images/dex.png' alt='DEX' width={48} height={48} className='text-[#00E0FF]' />
                                         </div>
-                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px]'>Sàn Giao Dịch Phi Tập Trung (DEX): Phát Triển Nền Tảng Giao Dịch Minh Bạch, An Toàn Và Tốc Độ Cao</p>
+                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>Sàn Giao Dịch Phi Tập Trung (DEX): Phát Triển Nền Tảng Giao Dịch Minh Bạch, An Toàn Và Tốc Độ Cao</p>
                                    </div>
 
                                    {/* Field 3 */}
@@ -241,7 +507,7 @@ export default function Home() {
                                         <div className='mx-auto w-12 h-12 mb-4'>
                                              <Image src='/images/al.png' alt='AI' width={48} height={48} className='text-[#00E0FF]' />
                                         </div>
-                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px]'>AI Ứng Dụng: Phát Triển Giải Pháp AI Phân Tích Dữ Liệu, Xử Lý Ngôn Ngữ Tự Nhiên Và Tự Động Hóa Quy Trình.</p>
+                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>AI Ứng Dụng: Phát Triển Giải Pháp AI Phân Tích Dữ Liệu, Xử Lý Ngôn Ngữ Tự Nhiên Và Tự Động Hóa Quy Trình.</p>
                                    </div>
 
                                    {/* Field 5 */}
@@ -249,7 +515,7 @@ export default function Home() {
                                         <div className='mx-auto w-12 h-12 mb-4'>
                                              <Image src='/images/IoT.png' alt='IoT' width={48} height={48} className='text-[#00E0FF]' />
                                         </div>
-                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px]'>IoT & Tự Động Hóa: Kết Nối Và Xử Lý Dữ Liệu Từ Thiết Bị Đầu Cuối Qua Mạng Blockchain và AI.</p>
+                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>IoT & Tự Động Hóa: Kết Nối Và Xử Lý Dữ Liệu Từ Thiết Bị Đầu Cuối Qua Mạng Blockchain và AI.</p>
                                    </div>
 
                                    {/* Field 6 */}
@@ -257,7 +523,7 @@ export default function Home() {
                                         <div className='mx-auto w-12 h-12 mb-4'>
                                              <Image src='/images/DeFin.png' alt='DePIN' width={48} height={48} className='text-[#00E0FF]' />
                                         </div>
-                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px]'>Hạ tầng phi tập trung DePIN: Xây Dựng Hệ Thống Hạ Tầng Mạng Phi Tập Trung Phục Vụ Cho Truyền Dữ Liệu, Định Vị Và Đo Lường Thông Minh.</p>
+                                        <p className='text-[#8198A4] pt-2 text-sm leading-[30px] text-justify'>Hạ Tầng Phi Tập Trung DePIN: Xây Dựng Hệ Thống Hạ Tầng Mạng Phi Tập Trung Phục Vụ Cho Truyền Dữ Liệu, Định Vị Và Đo Lường Thông Minh.</p>
                                    </div>
                               </div>
                          </div>
@@ -265,7 +531,7 @@ export default function Home() {
                </section>
 
                {/* Featured Projects Section */}
-               <section id='#projects' className='relative w-full py-20 overflow-hidden'>
+               {/* <section id='#projects' className='relative w-full py-20 overflow-hidden'>
                     <div data-aos='zoom-in' className='container mx-auto px-4'>
                          <div className='text-center mb-12'>
                               <h2 className='text-[28px] md:text-[32px] lg:text-[36px] font-bold text-center text-[#00D768]'>DỰ ÁN TIÊU BIỂU</h2>
@@ -276,16 +542,16 @@ export default function Home() {
                               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-center'></div>
                          </div>
                     </div>
-               </section>
+               </section> */}
 
-               <footer id='contact' className='bg-gradient-to-br from-[#004d4d] via-[#006666] to-[#00cccc] py-16 text-white'>
+               <footer id='contact' className='mt-10 bg-gradient-to-br from-[#004d4d] via-[#006666] to-[#00cccc] py-16 text-white'>
                     <div data-aos='fade-up' data-aos-duration='1000' className='max-w-7xl mx-auto px-6'>
                          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
                               <div>
                                    <div className='relative w-[160px] h-[50px] mb-6'>
                                         <Image src='/images/logo.svg' alt='Logo' fill className='object-contain' />
                                    </div>
-                                   <p className='text-sm leading-relaxed'>EG TEAM - Đội ngũ chuyên gia công nghệ Blockchain, Web3 và DePIN hàng đầu Việt Nam. Chúng tôi cung cấp các giải pháp công nghệ tiên tiến và đột phá.</p>
+                                   <p className='text-sm text-justify leading-relaxed'>EG TEAM - Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.</p>
                               </div>
 
                               {/* Liên hệ */}
@@ -301,11 +567,11 @@ export default function Home() {
                                         </li>
                                         <li className='flex items-center gap-3'>
                                              <span className='text-secondary-light'>📱</span>
-                                             +84 123 456 789
+                                             +84 000 000 000
                                         </li>
                                         <li className='flex items-center gap-3'>
                                              <span className='text-secondary-light'>📍</span>
-                                             Hà Nội, Việt Nam
+                                             TP. Hồ Chí Minh, Việt Nam
                                         </li>
                                    </ul>
                               </div>
@@ -317,14 +583,10 @@ export default function Home() {
                                         <span className='absolute -bottom-2 left-0 w-12 h-0.5 bg-secondary-light'></span>
                                    </h3>
                                    <div className='flex gap-4 mb-6'>
-                                        <a href='#' className='w-10 h-10 rounded-full bg-white/10 hover:bg-primary-light/20 transition flex items-center justify-center text-white'>
-                                             𝕏
-                                        </a>
-                                        <a href='#' className='w-10 h-10 rounded-full bg-white/10 hover:bg-primary-light/20 transition flex items-center justify-center text-white'>
-                                             ƒ
-                                        </a>
-                                        <a href='#' className='w-10 h-10 rounded-full bg-white/10 hover:bg-primary-light/20 transition flex items-center justify-center text-white'>
-                                             in
+                                        <a href='https://www.youtube.com/@EG-TEAM' target="_blank" className='w-10 h-10 rounded-full bg-white/10 hover:bg-primary-light/20 transition flex items-center justify-center text-white'>
+                                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M549.7 124.1c-6.3-23.7-24.9-42.4-48.6-48.6C456.5 64 288 64 288 64s-168.5 0-213.1 11.5c-23.7 6.3-42.4 24.9-48.6 48.6C16.8 168.5 16.8 256 16.8 256s0 87.5 9.5 131.9c6.3 23.7 24.9 42.4 48.6 48.6C119.5 448 288 448 288 448s168.5 0 213.1-11.5c23.7-6.3 42.4-24.9 48.6-48.6 9.5-44.4 9.5-131.9 9.5-131.9s0-87.5-9.5-131.9zM232 336V176l142 80-142 80z" />
+                                             </svg>
                                         </a>
                                    </div>
                               </div>
