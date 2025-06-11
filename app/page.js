@@ -724,7 +724,7 @@ export default function Home() {
                                                   viewBox="0 0 576 512"
                                                   xmlns="http://www.w3.org/2000/svg"
                                              >
-                                                  <path d="M549.7 124.1c-6.3-23.7-24.9-42.4-48.6-48.6C456.5 64 288 64 288 64s-168.5 0-213.1 11.5c-23.7 6.3-42.4 24.9-48.6 48.6C16.8 168.5 16.8 256 16.8 256s0 87.5 9.5 131.9c6.3 23.7 24.9 42.4 48.6 48.6C119.5 448 288 448 288 448s168.5 0 213.1-11.5c23.7-6.3 42.4-24.9 48.6-48.6 9.5-44.4 9.5-131.9 9.5-131.9s0-87.5-9.5-131.9zM232 336V176l142 80-142 80z" /> Youtube
+                                                  <path d="M549.7 124.1c-6.3-23.7-24.9-42.4-48.6-48.6C456.5 64 288 64 288 64s-168.5 0-213.1 11.5c-23.7 6.3-42.4 24.9-48.6 48.6C16.8 168.5 16.8 256 16.8 256s0 87.5 9.5 131.9c6.3 23.7 24.9 42.4 48.6 48.6C119.5 448 288 448 288 448s168.5 0 213.1-11.5c23.7-6.3 42.4-24.9 48.6-48.6 9.5-44.4 9.5-131.9 9.5-131.9s0-87.5-9.5-131.9zM232 336V176l142 80-142 80z" />
                                              </svg>
                                         </a>
                                    </div>
@@ -733,7 +733,7 @@ export default function Home() {
 
                          {/* Footer Bottom */}
                          <div className="mt-8 pt-8 border-t border-white/20 lg:text-center text-sm text-justify">
-                              ©{new Date().getFullYear()} <span className="text-[#00cccc] font-medium">EG TEAM</span>. Chúng tôi là những kỹ sư công nghệ đam mê Blockchain, Web3 và DePIN, luôn nỗ lực tiếp cận những giải pháp tiên tiến nhằm tạo ra giá trị thực tiễn cho doanh nghiệp.
+                              ©{new Date().getFullYear()} <span className="text-[#00cccc] font-medium">EG TEAM</span>. Chúng tôi là những sinh viên đam mê công nghệ.
                          </div>
                     </div>
                </footer>
