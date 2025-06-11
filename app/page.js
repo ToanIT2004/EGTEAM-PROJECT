@@ -426,7 +426,7 @@ export default function Home() {
                                                                       </p>
                                                                       <h2 className="text-base font-semibold text-gray-900 mb-1">Giới thiệu:</h2>
                                                                       <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
-                                                                           Tôi là Mai Hải Đăng, sinh viên Học viện Kỹ thuật mật mã, hiện đang đảm nhiệm vai trò Blockchain Developer tại EG Team – một các sinh viên đam mê nghiên cứu và phát triển các giải pháp công nghệ hiện đại, đặc biệt là trong lĩnh vực tự động hóa thông minh phục vụ đời sống và sản xuất. Với nền tảng vững chắc về Blockchain và An ninh mạng (Cyber Security), tôi luôn hướng đến việc xây dựng những ứng dụng có tính bảo mật cao, minh bạch và có giá trị thực tiễn.
+                                                                           Tôi là Mai Hải Đăng, sinh viên Học viện Kỹ thuật mật mã, hiện đang đảm nhiệm vai trò Blockchain Developer tại EG Team – một nhóm sinh viên đam mê nghiên cứu và phát triển các giải pháp công nghệ hiện đại, đặc biệt là trong lĩnh vực tự động hóa thông minh phục vụ đời sống và sản xuất. Với nền tảng vững chắc về Blockchain và An ninh mạng (Cyber Security), tôi luôn hướng đến việc xây dựng những ứng dụng có tính bảo mật cao, minh bạch và có giá trị thực tiễn.
                                                                       </p>
                                                                       <h2 className="text-base font-semibold text-gray-900 mb-1">Tầm nhìn:</h2>
                                                                       <p className="text-gray-700 text-sm leading-relaxed text-justify font-medium mb-3">
@@ -715,16 +715,16 @@ export default function Home() {
                                         <a
                                              href="https://www.youtube.com/@EG-TEAM"
                                              target="_blank"
-                                             className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00cccc]/20 transition flex items-center justify-center text-white group"
+                                             className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00cccc]/20 transition flex items-center justify-center text-white group"
                                              rel="noreferrer"
                                         >
                                              <svg
-                                                  className="w-4 h-4 group-hover:text-[#00cccc] transition-colors"
+                                                  className="w-6 h-6 group-hover:text-[#00cccc] transition-colors"
                                                   fill="currentColor"
                                                   viewBox="0 0 576 512"
                                                   xmlns="http://www.w3.org/2000/svg"
                                              >
-                                                  <path d="M549.7 124.1c-6.3-23.7-24.9-42.4-48.6-48.6C456.5 64 288 64 288 64s-168.5 0-213.1 11.5c-23.7 6.3-42.4 24.9-48.6 48.6C16.8 168.5 16.8 256 16.8 256s0 87.5 9.5 131.9c6.3 23.7 24.9 42.4 48.6 48.6C119.5 448 288 448 288 448s168.5 0 213.1-11.5c23.7-6.3 42.4-24.9 48.6-48.6 9.5-44.4 9.5-131.9 9.5-131.9s0-87.5-9.5-131.9zM232 336V176l142 80-142 80z" />
+                                                  <path d="M549.7 124.1c-6.3-23.7-24.9-42.4-48.6-48.6C456.5 64 288 64 288 64s-168.5 0-213.1 11.5c-23.7 6.3-42.4 24.9-48.6 48.6C16.8 168.5 16.8 256 16.8 256s0 87.5 9.5 131.9c6.3 23.7 24.9 42.4 48.6 48.6C119.5 448 288 448 288 448s168.5 0 213.1-11.5c23.7-6.3 42.4-24.9 48.6-48.6 9.5-44.4 9.5-131.9 9.5-131.9s0-87.5-9.5-131.9zM232 336V176l142 80-142 80z" /> Youtube
                                              </svg>
                                         </a>
                                    </div>
@@ -737,7 +737,6 @@ export default function Home() {
                          </div>
                     </div>
                </footer>
-
           </main>
      );
 }
